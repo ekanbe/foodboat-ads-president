@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FOODBOAT ネット広告方針 ― 社長説明資料</title>
+<style>
+  :root{
+    --navy:#0f3d79; --navy2:#1d5aa8; --gold:#d98a2b; --gold-bg:#fdf3e6;
+    --green:#1f9d57; --green-bg:#e7f6ee; --red:#c8442f; --red-bg:#fbeae6;
+    --ink:#2c2c2c; --mut:#6b6b6b; --line:#e8e2d8; --bg:#faf8f4; --card:#fff;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:"Hiragino Kaku Gothic ProN","Yu Gothic","Meiryo",sans-serif;
+    color:var(--ink);background:var(--bg);line-height:1.9;font-size:16.5px;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:880px;margin:0 auto;padding:0 24px}
+
+  .hero{background:linear-gradient(135deg,#0f3d79,#0a2a55);color:#fff;padding:64px 0 56px;text-align:center}
+  .hero .kicker{font-size:14px;letter-spacing:.2em;opacity:.75;margin-bottom:18px}
+  .hero h1{font-size:34px;font-weight:800;line-height:1.4;margin-bottom:16px}
+  .hero .sub{font-size:17px;opacity:.9}
+  .hero .date{margin-top:24px;font-size:13px;opacity:.6}
+
+  .band{background:var(--gold-bg);border-bottom:1px solid var(--line);padding:34px 0}
+  .band .overview-label{font-weight:800;color:var(--navy);font-size:14px;letter-spacing:.05em;margin-bottom:6px}
+  .band .overview-text{font-size:16px;margin-bottom:18px}
+  .band .msg-box{display:flex;gap:16px;align-items:flex-start;background:#fff;border:1px solid var(--line);border-radius:12px;padding:18px 22px}
+  .band .msg-icon{font-size:32px;flex:none;line-height:1.2}
+  .band .msg-label{display:block;font-weight:800;color:var(--gold);font-size:13px;margin-bottom:4px}
+  .band .msg-box b{color:var(--navy)}
+
+  .map-wrap{padding:44px 0;border-bottom:1px solid var(--line)}
+  .map{background:#fff;border:1px solid var(--line);border-radius:16px;padding:30px 32px;box-shadow:0 2px 10px rgba(0,0,0,.04)}
+  .map .mhead{text-align:center;margin-bottom:24px}
+  .map .mhead .t{font-size:20px;font-weight:800;color:var(--navy)}
+  .map .mhead .s{font-size:14.5px;color:var(--mut);margin-top:4px}
+  .pgroup{margin-bottom:20px}
+  .pgroup:last-child{margin-bottom:0}
+  .pg-head{display:flex;align-items:baseline;gap:12px;margin-bottom:8px;padding-bottom:7px;border-bottom:2px solid var(--gold)}
+  .pg-q{font-size:17px;font-weight:800;color:var(--gold);letter-spacing:.08em;flex:none}
+  .pg-t{font-size:15.5px;font-weight:700;color:var(--navy)}
+  .pgroup ol{list-style:none;padding-left:4px}
+  .pgroup li{padding:5px 0;display:flex;gap:12px;align-items:baseline;font-size:15px}
+  .pgroup li .n{color:var(--navy);font-weight:800;flex:none;width:22px}
+  .pgroup li a{color:var(--ink);text-decoration:none}
+  .pgroup li a:hover{color:var(--navy);text-decoration:underline}
+
+  .part{padding:46px 0 0}
+  .part-inner{background:linear-gradient(135deg,#e0922e,#b56f1c);color:#fff;border-radius:16px;padding:28px 32px;text-align:center;box-shadow:0 4px 14px rgba(181,111,28,.25)}
+  .part .plabel{font-size:15px;letter-spacing:.28em;opacity:.75;font-weight:700}
+  .part .ptitle{font-size:24px;font-weight:800;margin-top:6px}
+  .part .pdesc{font-size:14.5px;opacity:.85;margin-top:8px}
+
+  section{padding:42px 0;border-bottom:1px solid var(--line)}
+  .sec-head{display:flex;align-items:center;gap:16px;margin-bottom:22px}
+  .sec-num{width:44px;height:44px;border-radius:50%;background:var(--navy);color:#fff;
+    display:flex;align-items:center;justify-content:center;font-size:19px;font-weight:800;flex:none}
+  .sec-head h2{font-size:22px;font-weight:800;color:var(--navy);line-height:1.35}
+  p{margin-bottom:14px}
+  .lead{font-size:17px}
+  strong,b{color:var(--navy);font-weight:700}
+  .muted{color:var(--mut);font-size:15px}
+
+  .hl{background:var(--card);border:2px solid var(--navy);border-radius:14px;padding:22px 26px;margin:18px 0;font-size:18px;text-align:center}
+  .hl .big{font-size:23px;font-weight:800;color:var(--navy)}
+  .quote{border-left:5px solid var(--gold);background:#fff;padding:16px 22px;border-radius:0 10px 10px 0;margin:16px 0;font-size:17px}
+  .recall{background:var(--navy);color:#fff;border-radius:12px;padding:16px 22px;margin:18px 0;font-size:16px}
+  .recall b{color:#ffd699}
+
+  .cards{display:grid;gap:16px;margin:18px 0}
+  .c3{grid-template-columns:repeat(3,1fr)}
+  .c2{grid-template-columns:1fr 1fr}
+  @media(max-width:720px){.c3,.c2{grid-template-columns:1fr}}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px;box-shadow:0 2px 8px rgba(0,0,0,.03)}
+  .card .tag{display:inline-block;background:var(--navy);color:#fff;font-weight:800;font-size:15px;border-radius:8px;padding:3px 12px;margin-bottom:12px}
+  .card h3{font-size:18px;color:var(--navy);margin-bottom:8px}
+  .card p{font-size:15px;margin-bottom:0}
+
+  table{width:100%;border-collapse:collapse;margin:16px 0;background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.03)}
+  th,td{padding:13px 16px;text-align:left;border-bottom:1px solid var(--line);font-size:15.5px}
+  th{background:var(--navy);color:#fff;font-weight:700;font-size:14.5px}
+  tr:last-child td{border-bottom:none}
+  .ok{color:var(--green);font-weight:800}
+  .ng{color:var(--red);font-weight:800}
+  .row-good{background:var(--green-bg)}
+
+  .analogy{background:var(--navy);color:#fff;border-radius:16px;padding:28px 30px;margin:20px 0;text-align:center}
+  .analogy .icon{font-size:44px;margin-bottom:10px}
+  .analogy .t{font-size:22px;font-weight:800;margin-bottom:8px}
+  .analogy .d{font-size:16px;opacity:.9}
+
+  .flow{background:#fff;border:1px solid var(--line);border-radius:14px;padding:24px;margin:18px 0}
+  .flow .step{display:flex;gap:16px;padding:12px 0;border-bottom:1px dashed var(--line)}
+  .flow .step:last-child{border-bottom:none}
+  .flow .when{flex:none;width:64px;font-weight:800;color:var(--gold)}
+  .flow .what{font-size:15.5px}
+  .flow .what b{color:var(--navy)}
+
+  .calc{display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap;margin:20px 0}
+  .calc .box{background:#fff;border:2px solid var(--line);border-radius:12px;padding:16px 22px;text-align:center;min-width:130px}
+  .calc .box .v{font-size:24px;font-weight:800;color:var(--navy)}
+  .calc .box .l{font-size:13px;color:var(--mut);margin-top:4px}
+  .calc .box.final{border-color:var(--green);background:var(--green-bg)}
+  .calc .box.final .v{color:var(--green)}
+  .calc .op{font-size:26px;color:var(--mut);font-weight:300}
+
+  .branch{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:18px 0}
+  @media(max-width:720px){.branch{grid-template-columns:1fr}}
+  .branch .b{border-radius:14px;padding:22px}
+  .branch .eda{background:var(--green-bg);border:1px solid #b9e4cb}
+  .branch .miki{background:var(--gold-bg);border:1px solid #f0d3a8}
+  .branch .b img{display:block;width:100%;height:175px;object-fit:cover;border-radius:10px;margin-bottom:14px;background:#fff}
+  .branch h3{font-size:18px;margin-bottom:6px}
+  .branch .eda h3{color:var(--green)}
+  .branch .miki h3{color:var(--gold)}
+
+  .twocol{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:14px 0}
+  @media(max-width:720px){.twocol{grid-template-columns:1fr}}
+
+  .bars{margin:16px 0}
+  .bar-row{display:flex;align-items:center;gap:14px;margin:10px 0}
+  .bar-row .lbl{width:200px;font-size:15px;font-weight:700;color:var(--navy);flex:none}
+  .bar-row .track{flex:1;background:#ece8e0;border-radius:7px;height:30px;overflow:hidden}
+  .bar-row .fill{height:100%;border-radius:7px;display:flex;align-items:center;justify-content:flex-end;padding-right:10px;color:#fff;font-weight:800;font-size:14px;min-width:44px}
+  @media(max-width:560px){.bar-row .lbl{width:130px;font-size:13px}}
+
+  h3.subh{color:var(--navy);margin:24px 0 8px;font-size:18px}
+
+  .mock{background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px;box-shadow:0 2px 8px rgba(0,0,0,.04)}
+  .mock .cap{font-size:13px;color:var(--mut);margin-bottom:10px;font-weight:700}
+  .mock.google .sbar{background:#f1f3f4;border-radius:20px;padding:9px 16px;color:#555;font-size:14px;margin-bottom:14px}
+  .mock.google .admark{display:inline-block;color:#202124;font-weight:700;font-size:12px;border:1px solid #ccc;border-radius:4px;padding:0 5px;margin-bottom:4px}
+  .mock.google .title{color:#1a0dab;font-size:17px;font-weight:700;line-height:1.4}
+  .mock.google .url{color:var(--green);font-size:13px}
+  .mock.google .desc{color:#3c4043;font-size:13.5px;margin-top:2px}
+  .mock.insta .head{display:flex;align-items:center;gap:8px;font-size:13px;font-weight:700;color:#333;margin-bottom:10px}
+  .mock.insta .dot{width:26px;height:26px;border-radius:50%;background:linear-gradient(45deg,#f09433,#bc1888)}
+  .mock.insta .imgph{height:150px;border-radius:8px;background:linear-gradient(135deg,#1d5aa8,#0f3d79);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:15px;text-align:center;padding:10px}
+  .mock.insta .sponsor{font-size:12px;color:var(--mut);margin-top:8px}
+  .mock.insta .cta{display:inline-block;background:#0095f6;color:#fff;font-size:13px;font-weight:700;border-radius:6px;padding:6px 14px;margin-top:8px}
+
+  .scene{background:var(--gold-bg);border:1px solid #f0d3a8;border-radius:12px;padding:16px 20px;margin:16px 0;font-size:15.5px}
+  .scene .slabel{display:block;font-weight:800;color:var(--gold);font-size:13px;margin-bottom:4px}
+
+  .closing{background:linear-gradient(135deg,#0f3d79,#0a2a55);color:#fff;text-align:center;padding:56px 24px}
+  .closing .leaf{font-size:40px;margin-bottom:14px}
+  .closing h2{font-size:25px;font-weight:800;margin-bottom:14px;color:#fff}
+  .closing p{font-size:18px;opacity:.92;max-width:660px;margin:0 auto 8px}
+  .closing b{color:#ffd699}
+
+  footer{text-align:center;padding:24px;color:var(--mut);font-size:13px}
+
+  /* ===== スマホ対応 ===== */
+  @media(max-width:600px){
+    body{font-size:15px;line-height:1.8}
+    .wrap{padding:0 16px}
+
+    /* ヒーロー */
+    .hero{padding:40px 0 36px}
+    .hero h1{font-size:22px}
+    .hero .sub{font-size:15px}
+
+    /* 冒頭バンド */
+    .band{padding:22px 0}
+    .band .overview-text{font-size:14px}
+    .band .msg-box{padding:14px 16px;gap:12px}
+    .band .msg-icon{font-size:24px}
+
+    /* 目次マップ */
+    .map-wrap{padding:28px 0}
+    .map{padding:20px 16px}
+    .map .mhead .t{font-size:17px}
+    .pgroup li{font-size:14px}
+
+    /* ゴールド帯 */
+    .part{padding:30px 0 0}
+    .part-inner{padding:20px 20px;border-radius:12px}
+    .part .ptitle{font-size:20px}
+    .part .plabel{font-size:13px}
+    .part .pdesc{font-size:13px}
+
+    /* 章見出し */
+    section{padding:28px 0}
+    .sec-num{width:36px;height:36px;font-size:16px}
+    .sec-head h2{font-size:18px}
+    h3.subh{font-size:16px}
+
+    /* ハイライト・引用 */
+    .hl{padding:16px 18px;font-size:15px}
+    .hl .big{font-size:18px}
+    .quote{padding:14px 16px;font-size:15px}
+    .recall{padding:14px 16px;font-size:14px}
+
+    /* テーブル（横スクロール対応） */
+    table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch;font-size:13.5px}
+    th,td{padding:10px 12px;white-space:nowrap}
+
+    /* 計算ボックス */
+    .calc{gap:8px}
+    .calc .box{min-width:100px;padding:12px 14px}
+    .calc .box .v{font-size:19px}
+    .calc .op{font-size:20px}
+
+    /* 棒グラフ */
+    .bar-row .lbl{width:110px;font-size:12px}
+
+    /* フロー */
+    .flow .step{flex-direction:column;gap:6px}
+    .flow .when{width:auto}
+
+    /* STEPカード2列→1列 */
+    .c2,.c3{grid-template-columns:1fr}
+
+    /* アナロジーボックス */
+    .analogy{padding:20px 16px}
+    .analogy .t{font-size:18px}
+
+    /* 枝葉・幹カード画像高さ調整 */
+    .branch .b img{height:140px}
+  }
+
+  /* purchase journey (phone mockups) */
+  .journey{display:flex;align-items:flex-start;justify-content:center;gap:6px;margin:20px 0;flex-wrap:wrap}
+  .jstep{display:flex;flex-direction:column;align-items:center;width:150px}
+  .phone{width:150px;background:#222;border-radius:20px;padding:7px;box-shadow:0 5px 14px rgba(0,0,0,.16)}
+  .phone .screen{background:#fff;border-radius:13px;overflow:hidden;height:270px;display:flex;flex-direction:column}
+  .jarrow{display:flex;align-items:flex-start;color:var(--gold);font-size:26px;font-weight:700;padding-top:120px}
+  .jlabel{text-align:center;margin-top:12px;font-size:13px;color:var(--mut);line-height:1.5}
+  .jlabel b{display:block;color:var(--navy);font-size:14.5px;margin-bottom:2px}
+  @media(max-width:760px){.journey{gap:4px}.jstep,.phone{width:128px}.jarrow{padding-top:100px;font-size:18px}}
+  .sc-bar{height:22px;background:#f1f3f4;border-radius:11px;margin:9px 9px 7px;display:flex;align-items:center;padding:0 8px;gap:6px}
+  .sc-bar .gdot{width:13px;height:13px;border-radius:50%;background:conic-gradient(#4285f4,#ea4335,#fbbc05,#34a853);flex:none}
+  .sc-bar .gline{flex:1;height:5px;background:#cfd4da;border-radius:3px}
+  .sc-ad{margin:0 9px 8px;border:2px solid var(--gold);background:#fdf6ea;border-radius:8px;padding:8px}
+  .sc-ad .tg{font-size:8px;color:var(--gold);font-weight:800;display:block;margin-bottom:4px}
+  .sc-line{height:6px;background:#dde2e8;border-radius:3px;margin:5px 9px}
+  .sc-line.blue{background:#1a73e8;width:62%}
+  .sc-line.sm{width:42%}
+  .sc-hero{background-size:cover;background-position:center}
+  .sc-badges{display:flex;justify-content:space-around;padding:9px 8px 4px}
+  .sc-badges .bdg{width:30px;height:30px;border-radius:50%;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font-size:14px}
+  .sc-stars{color:var(--gold);font-size:11px;margin:5px 9px;letter-spacing:1px}
+  .sc-cart{margin:auto 9px 10px;background:var(--gold);color:#fff;border-radius:8px;text-align:center;padding:9px;font-size:11px;font-weight:800}
+  .sc-done{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px}
+  .sc-check{width:60px;height:60px;border-radius:50%;background:var(--gold);color:#fff;display:flex;align-items:center;justify-content:center;font-size:34px;font-weight:800}
+  .sc-box{font-size:26px}
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="wrap">
+    <div class="kicker">MARUI BUSSAN ／ FOODBOAT</div>
+    <h1>FOODBOAT ネット広告方針</h1>
+    <div class="sub">― 事業者向け（toB）デジタル集客の方針 ―</div>
+    <div class="date">2026年5月</div>
+  </div>
+</div>
+
+<div class="band">
+  <div class="wrap">
+    <p class="overview-label">この資料について</p>
+    <p class="overview-text">FOODBOAT（マルイのネット店）で、ネット広告を<b>どう始め、どう伸ばすか</b>をまとめた資料です。<b>前提 → WHO → WHAT → HOW → HOW MUCH</b> の順に説明していきます。</p>
+    <div class="msg-box">
+      <div class="msg-icon">🎯</div>
+      <div><span class="msg-label">本資料の目的</span>この資料は、<b>ネット広告の進め方について合意をいただくため</b>のものです。合意が取れ次第、<b>次のステップ（広告画像・動画・LPの制作）</b>に進み、改めて社長に確認をいただきます。</div>
+    </div>
+  </div>
+</div>
+
+<!-- MAP -->
+<div class="map-wrap"><div class="wrap">
+  <div class="map">
+    <div class="mhead"><div class="t">全体像 ― 5つのまとまり</div></div>
+
+    <div class="pgroup">
+      <div class="pg-head"><span class="pg-q">前提</span><span class="pg-t">広告とは何か、どんな集客に向くのか</span></div>
+      <ol>
+        <li><span class="n">1</span><a href="#s1">ネット広告とは何か</a></li>
+        <li><span class="n">2</span><a href="#s2">ネット広告は「事業者向け（toB）」と相性がいい</a></li>
+      </ol>
+    </div>
+    <div class="pgroup">
+      <div class="pg-head"><span class="pg-q">WHO</span><span class="pg-t">誰に売るか</span></div>
+      <ol>
+        <li><span class="n">3</span><a href="#s3">マルイの顧客と、ネットで狙う相手（A・B・C）</a></li>
+      </ol>
+    </div>
+    <div class="pgroup">
+      <div class="pg-head"><span class="pg-q">WHAT</span><span class="pg-t">何を売るか</span></div>
+      <ol>
+        <li><span class="n">4</span><a href="#s4">広告で売る商材 ― 枝葉と幹</a></li>
+      </ol>
+    </div>
+    <div class="pgroup">
+      <div class="pg-head"><span class="pg-q">HOW</span><span class="pg-t">どうやって集めるか</span></div>
+      <ol>
+        <li><span class="n">5</span><a href="#s5">どこに広告を出すか ― GoogleとInstagram</a></li>
+        <li><span class="n">6</span><a href="#s6">Google広告 ― 今すぐ探している人を捕まえる</a></li>
+        <li><span class="n">7</span><a href="#s7">Instagram広告 ― 似た人に広げる</a></li>
+      </ol>
+    </div>
+    <div class="pgroup">
+      <div class="pg-head"><span class="pg-q">HOW MUCH</span><span class="pg-t">いくらで集めるか</span></div>
+      <ol>
+        <li><span class="n">8</span><a href="#s8">広告費の考え方 ― 1人いくらで集めるか</a></li>
+        <li><span class="n">9</span><a href="#s9">目標は「1人を6,600円以下で集める」</a></li>
+      </ol>
+    </div>
+    <div class="pgroup">
+      <div class="pg-head"><span class="pg-q" style="color:var(--navy)">まとめ</span><span class="pg-t">この資料で合意したいこと</span></div>
+      <ol>
+        <li><span class="n">✓</span><a href="#summary">4つの方針（誰に・何を・どう・いくらで）</a></li>
+      </ol>
+    </div>
+  </div>
+</div></div>
+
+<!-- ===== PART: 前提 ===== -->
+<div class="part"><div class="wrap"><div class="part-inner">
+  <div class="plabel">前 提</div>
+  <div class="ptitle">まず、広告の基本から</div>
+  <div class="pdesc">広告とは何か、どんな集客に向くのかを共有します</div>
+</div></div></div>
+
+<!-- 1 -->
+<section id="s1"><div class="wrap">
+  <div class="sec-head"><div class="sec-num">1</div><h2>ネット広告とは何か</h2></div>
+  <p class="lead">ネット広告とは、ひとことで言えば ――</p>
+  <figure style="text-align:center;margin:20px 0">
+    <img src="salesman.png" alt="24時間働き続ける営業マン" style="width:100%;max-width:440px;border-radius:14px">
+    <figcaption style="font-size:21px;font-weight:800;color:var(--navy);margin-top:12px">24時間 働き続ける営業マン</figcaption>
+    <figcaption class="muted">疲れず、24時間、全国を回り続ける</figcaption>
+  </figure>
+  <p>しかも普通の営業マンとは違います。飛び込みでも片っ端でもなく、<strong>「今まさに商品を欲しがっている人」だけ</strong>を狙って、ピンポイントで会いに行きます。</p>
+  <p>営業マンを増やすには採用も教育も要ります。でもネット広告なら、<strong>お金を払った分だけ、この"優秀な営業マン"を増やせる</strong>。営業の「人手の限界」を、お金で超えられる道具です。</p>
+  <div class="quote">ただし、大事なことがひとつだけあります。それは <b>「お客さん1人を、いくらで集めれば儲かるか」</b>。<br>ここを見極められれば、広告は儲かる仕組みになります。<span class="muted">（この"いくらで集めるか"の話は、最後の HOW MUCH で詳しくお話しします）</span></div>
+</div></section>
+
+<!-- 2 -->
+<section id="s2"><div class="wrap">
+  <div class="sec-head"><div class="sec-num">2</div><h2>ネット広告は「事業者向け（toB）」と相性がいい</h2></div>
+  <p>マルイは、事業者（toB）にも一般消費者（toC）にも商品を届けています。どちらも大切なお客さんです。<br>ただし「<strong>ネット広告</strong>」という手法に限って言えば、<strong>事業者向け（toB）と特に相性がいい</strong>。理由は、1回の購入額にあります。</p>
+  <table>
+    <tr><th></th><th>事業者向け（toB）</th><th>一般消費者向け（toC）</th></tr>
+    <tr><td><b>1回の購入額</b></td><td class="ok">大きい（約2.2万円・ケース買い）</td><td>小さい（数百〜数千円）</td></tr>
+    <tr><td><b>常連になるか</b></td><td class="ok">なる（毎月のように仕入れる）</td><td>一度きりが多い</td></tr>
+    <tr><td><b>向いている集客</b></td><td class="ok">ネット広告（Google・Instagram）</td><td>インフルエンサー・口コミ・SNS など</td></tr>
+  </table>
+  <p><b>なぜ事業者向けに広告が向くのか。</b> ネット広告は「1人集めるのに○円」とお金がかかります。事業者は1人が2.2万円買うので<strong>多少かけても元が取れる</strong>。でも一般消費者向けに500円の商品を売るのに1人800円かけたら<span class="ng">売るほど赤字</span>です。</p>
+  <div class="quote">だから、<b>ネット広告は事業者向け（toB）に集中</b>します。<br>一般消費者向けは、インフルエンサーや口コミ、SNSでの話題づくりなど、<b>別の手法のほうが向きます</b>（これはまた別の機会に）。</div>
+</div></section>
+
+<!-- ===== PART: WHO ===== -->
+<div class="part"><div class="wrap"><div class="part-inner">
+  <div class="plabel">WHO</div>
+  <div class="ptitle">誰に売るか</div>
+  <div class="pdesc">事業者の中で、どの相手を狙うのかを決めます</div>
+</div></div></div>
+
+<!-- 3 -->
+<section id="s3"><div class="wrap">
+  <div class="sec-head"><div class="sec-num">3</div><h2>マルイの顧客と、ネットで狙う相手</h2></div>
+  <p>マルイのお客さん（事業者）は、大きく3層に分かれます。</p>
+  <figure style="margin:18px 0 10px">
+    <img src="targets.png" alt="3つのターゲット業態（キッチンカー・カフェ・大手チェーン）" style="width:100%;border-radius:14px">
+  </figure>
+  <div class="cards c3">
+    <div class="card"><div class="tag">A</div><h3>キッチンカー</h3><p>移動販売で営業する事業者</p></div>
+    <div class="card"><div class="tag">B</div><h3>実店舗の飲食店・カフェ</h3><p>店舗を構えて営業する事業者</p></div>
+    <div class="card"><div class="tag">C</div><h3>大手外食チェーン</h3><p>多店舗展開する大手。自社専用（PB）商品を作る相手</p></div>
+  </div>
+
+  <h3 class="subh">ネット通販（EC）で取れるのは、A と B</h3>
+  <p>この3層のうち、<strong>ネット通販で直接買ってくれるのは、主に A（キッチンカー）と B（実店舗）</strong>です。FOODBOATの過去の全注文データでも、繰り返し仕入れているのはこの2層 ＝ <strong>ニーズがはっきり合っています</strong>。</p>
+  <div class="hl"><span class="big">EC（ネット販売）の主役は A・B。<br>C は広告で"接点"を作り、営業が取る。</span></div>
+
+  <p class="muted">なお <strong>C（大手チェーン）はネットでケース買いはしません</strong>。商談でPB商品を一緒に作る、オフラインの世界です。広告は"きっかけ作り"に使い、「PB開発の資料請求」から連絡先を得て、営業が商談につなげます。</p>
+</div></section>
+
+<!-- ===== PART: WHAT ===== -->
+<div class="part"><div class="wrap"><div class="part-inner">
+  <div class="plabel">WHAT</div>
+  <div class="ptitle">何を売るか</div>
+  <div class="pdesc">広告で売る商材を、2種類に整理します</div>
+</div></div></div>
+
+<!-- 4 -->
+<section id="s4"><div class="wrap">
+  <div class="sec-head"><div class="sec-num">4</div><h2>広告で売る商材は、2種類ある</h2></div>
+  <div class="branch">
+    <div class="b eda"><img src="product-tapioca.jpg" alt="タピオカミルクティー"><h3>🌿 枝葉の商材</h3><p><b>タピオカ など</b><br>すでに繰り返し買われる定番。<b>すぐ売上になる</b></p></div>
+    <div class="b miki"><img src="product-milk-powder.jpg" alt="水溶性クリーミングパウダー"><h3>🌳 幹の商材</h3><p><b>牛乳の代わりになるパウダー など</b><br>良い商品なのに<b>ECでまだ売れていない</b></p></div>
+  </div>
+  <p class="lead"><strong>①枝葉で着実に売上を作りながら、②幹を本気で育てる。</strong> これが広告の二本柱です。</p>
+
+  <h3 class="subh">なぜ、幹の商材はECで売れていないのか</h3>
+  <p>・<strong>幹の商材は、分かりづらい</strong>：タピオカは「そのまま使えば完成」。でも牛乳代替パウダーは「水で溶かして、どのドリンクに使い、牛乳とどう違うか」を<strong>説明しないと伝わらない</strong>。<br>・<strong>今のネット店では、その説明が足りていない</strong>：商品ページに少し書いてあるだけで、良さが伝わりきっていない。</p>
+
+  <p>これは数字にもはっきり出ています。<b>実際に仕入れた店の数</b>を比べると ―</p>
+  <div class="calc">
+    <div class="box"><div class="v">1,138店</div><div class="l">🌿 タピオカ（枝葉）</div></div>
+    <div class="op">vs</div>
+    <div class="box"><div class="v" style="color:var(--gold)">38店</div><div class="l">🌳 牛乳代替パウダー（幹）</div></div>
+  </div>
+  <p class="muted">タピオカは1,000店以上が仕入れる定番。牛乳代替パウダーは<b>まだ38店</b>しか仕入れていない ＝ ほとんど知られておらず、<b>大きな伸びしろがある</b>。（社内の全注文データ・約1年半より）</p>
+
+  <div class="quote">つまり <b>売れないのは商品が悪いからではなく、伝え方が足りないから</b>。<br>専用ページ（LP）と広告でしっかり説明すれば、<b>幹の商材も売れるようになります。</b></div>
+</div></section>
+
+<!-- ===== PART: HOW ===== -->
+<div class="part"><div class="wrap"><div class="part-inner">
+  <div class="plabel">HOW</div>
+  <div class="ptitle">どうやって集めるか</div>
+  <div class="pdesc">使う媒体と、媒体ごとに作るものを設計します</div>
+</div></div></div>
+
+<!-- 5 -->
+<section id="s5"><div class="wrap">
+  <div class="sec-head"><div class="sec-num">5</div><h2>どこに広告を出すか ― GoogleとInstagram</h2></div>
+  <p>広告を出せる場所は他にもあります（LINE・TikTok・YouTube・X…）。でも全部に出すのは、<strong>お客さんがいない地域にまで営業に回るようなもの</strong>。お客さんが確実にいる<strong>2つの場所だけ</strong>に絞ります。</p>
+  <table>
+    <tr><th>媒体</th><th>出す？</th><th>理由</th></tr>
+    <tr class="row-good"><td><b>Google</b></td><td><span class="ok">◎</span></td><td>仕入れ先を探す人が検索する＝買う気のある人を捕まえられる</td></tr>
+    <tr class="row-good"><td><b>Instagram</b></td><td><span class="ok">◎</span></td><td>キッチンカーや飲食店が、自店の集客で日常的に使っている</td></tr>
+    <tr><td>LINE</td><td><span class="ng">×</span></td><td>友だちとの連絡が中心。仕事の仕入れを探す場ではない</td></tr>
+    <tr><td>TikTok</td><td><span class="ng">×</span></td><td>娯楽の動画が中心。仕入れを探す人がいない</td></tr>
+    <tr><td>YouTube</td><td><span class="ng">×</span></td><td>視聴者は娯楽・情報目的。仕入れ先を探す場ではない</td></tr>
+    <tr><td>X（旧Twitter）</td><td><span class="ng">×</span></td><td>情報の拡散・交流が中心。仕入れ先を探す場ではない</td></tr>
+  </table>
+  <p>次の章から、<b>Google</b>と<b>Instagram</b>を1つずつ見ていきます。</p>
+</div></section>
+
+<!-- 6 -->
+<section id="s6"><div class="wrap">
+  <div class="sec-head"><div class="sec-num">6</div><h2>Google広告 ― 今すぐ探している人を捕まえる</h2></div>
+  <p>Googleは、何かを<strong>検索した人</strong>に出る広告です。「業務用タピオカ 仕入れ」と検索する人は、もう<strong>買う気があります</strong>。その瞬間に、検索結果の一番上に広告を出して捕まえます。</p>
+  <figure style="margin:18px 0;text-align:center">
+    <img src="google-search.png" alt="Googleで「タピオカ仕入れ」と検索した時の広告表示" style="width:100%;max-width:460px;border-radius:12px;border:1px solid var(--line)">
+    <figcaption class="muted" style="margin-top:6px">▲「タピオカ仕入れ」で検索した時。上部の「広告」枠に表示されます</figcaption>
+  </figure>
+  <h3 class="subh">必要なもの</h3>
+  <table>
+    <tr><th>作るもの</th><th>役割（弊社の営業でいうと）</th></tr>
+    <tr><td><b>検索広告（文字）</b></td><td>展示会でいう<b>看板</b>。検索結果の上で見つけてもらい、足を止める</td></tr>
+    <tr class="row-good"><td><b>LP（専用ページ）</b></td><td>立ち寄ったお客様への<b>商品紹介</b>。説明して購入を決める</td></tr>
+  </table>
+
+  <figure style="margin:20px 0 6px">
+    <img src="purchase-flow.png" alt="広告から購入までの流れ：①広告を見る ②専用ページ(LP) ③商品ページ ④購入完了" style="width:100%;border-radius:14px">
+  </figure>
+  <p class="muted">入口（広告）はGoogle・Instagramで違っても、その後は同じ。<b>最後はLP・商品ページを通って購入</b>に進みます。</p>
+
+  <div class="quote">狙うのは<b>今すぐ仕入れ先を探している人</b>（主にA・Bの"今すぐ客"）。買う気のある人だけに会えるので、<b>無駄が少なく、すぐ売上につながります。</b></div>
+</div></section>
+
+<!-- 7 -->
+<section id="s7"><div class="wrap">
+  <div class="sec-head"><div class="sec-num">7</div><h2>Instagram広告 ― 似た人に広げる</h2></div>
+  <p>Instagramは、ユーザーが眺めている画面（<strong>フィード・ストーリーズ・発見ホーム・リール</strong>など）に、写真・動画で自然に流れる広告です。</p>
+  <figure style="margin:18px 0;text-align:center">
+    <img src="instagram-formats.png" alt="Instagram広告の表示場所（フィード・ストーリーズ・発見ホーム・リール）" style="width:100%;max-width:760px;border-radius:12px">
+    <figcaption class="muted" style="margin-top:6px">▲ さまざまな画面に、自然な形で表示されます</figcaption>
+  </figure>
+  <h3 class="subh">必要なもの</h3>
+  <table>
+    <tr><th>作るもの</th><th>役割（弊社の営業でいうと）</th></tr>
+    <tr><td><b>広告画像・動画</b></td><td>展示会でいう<b>サンプル商品・看板</b>。まず足を止めてもらう</td></tr>
+    <tr class="row-good"><td><b>LP（専用ページ）</b></td><td>サンプルを使ってくれたお客様への<b>商品紹介</b>。説明して購入を決める</td></tr>
+  </table>
+  <p class="muted">※ LP（専用ページ）は、GoogleとInstagramの<b>両方</b>で使う共通の着地点。<b>購入を決めるのはLP</b>なので、ここが一番大事です。</p>
+
+  <h3 class="subh">Instagramならではの強み ―「類似広告」</h3>
+  <p>Instagramの使い方は2つ。① 一度サイトを見た人にもう一度声をかける　② <strong>類似広告</strong>です。</p>
+  <figure style="margin:18px 0">
+    <img src="lookalike.png" alt="類似広告の仕組み：①顧客リストを登録 ②システムが似た人を自動で探す ③広告を配信" style="width:100%;border-radius:14px;border:1px solid var(--line)">
+  </figure>
+  <p>ここで、マルイの<strong>"資産"</strong>が効きます。<strong>すでに買ってくれた優良客のデータ</strong>と、<strong>各地の展示会で集めた名刺</strong>。これを登録すれば、最初から確度の高い相手に広告を当てられます。</p>
+  <div class="hl"><span class="big">優良客の"コピー"を全国から探し出して広告を当てられる</span><br><span class="muted">ゼロから手探りの新規参入者には真似できない、マルイだけのスタート地点</span></div>
+</div></section>
+
+<!-- ===== PART: HOW MUCH ===== -->
+<div class="part"><div class="wrap"><div class="part-inner">
+  <div class="plabel">HOW MUCH</div>
+  <div class="ptitle">いくらで集めるか</div>
+  <div class="pdesc">広告費の考え方と、合格ラインを決めます</div>
+</div></div></div>
+
+<!-- 8 -->
+<section id="s8"><div class="wrap">
+  <div class="sec-head"><div class="sec-num">8</div><h2>広告費の考え方 ― 1人いくらで集めるか</h2></div>
+  <div class="recall">第1章でお伝えした<b>「お客さん1人を、いくらで集めれば儲かるか」</b>。これが広告でいちばん大事な数字で、<b>CPA</b>と呼びます。（覚えるのはこの言葉だけ）</div>
+  <p>進め方は、シンプルに2段階です。</p>
+  <div class="cards c2">
+    <div class="card"><div class="tag">STEP 1</div><h3>まず、合格ラインに収める</h3><p>小さく試す（月3〜5万円）。「1人をいくらで集められるか」を確かめる</p></div>
+    <div class="card"><div class="tag">STEP 2</div><h3>合えば、広告費を増やす</h3><p>儲かる「型」ができたら、<b style="color:var(--green)">あとはお金を入れた分だけ売上が伸びる（青天井）</b></p></div>
+  </div>
+  <p class="lead">だから最初は焦らず、<strong>合格ラインを作ることに集中</strong>します。では、その合格ラインはいくらか ―― 次章で計算します。</p>
+</div></section>
+
+<!-- 9 -->
+<section id="s9"><div class="wrap">
+  <div class="sec-head"><div class="sec-num">9</div><h2>目標は「1人を6,600円以下で集める」</h2></div>
+  <div class="calc">
+    <div class="box"><div class="v">2.2万円</div><div class="l">1人が初回に買う額</div></div>
+    <div class="op">×</div>
+    <div class="box"><div class="v">約3割</div><div class="l">マルイの儲け（粗利）</div></div>
+    <div class="op">=</div>
+    <div class="box final"><div class="v">6,600円</div><div class="l">CPA 合格ライン</div></div>
+  </div>
+  <div class="hl"><span class="big">お客さん1人を「6,600円以下」で集められれば、初回で元が取れる</span><br><span class="muted">この「1人を集める広告費」が <b>CPA</b>（第8章）。<b>CPA 6,600円以下</b>が合格ライン</span></div>
+  <p>さらに、そのお客さんが<strong>常連になれば何度も買ってくれます</strong>（よく買う常連1人は、一度きりの客の何十人分もの価値）。だから常連になる相手なら、実際は<strong>1人1万円くらいまでかけてもOK</strong>。<br>まずは「6,600円以下で1人」を目指し、達成したら広告費を増やしていきます。</p>
+</div></section>
+
+<!-- まとめ -->
+<section id="summary"><div class="wrap">
+  <div class="sec-head"><div class="sec-num" style="background:var(--red)">✓</div><h2 style="color:var(--red)">まとめ ― この資料で合意したいこと</h2></div>
+  <p class="lead">本資料の目的は、下記の<strong>広告の方針について合意をいただくこと</strong>です。<br>合意が取れ次第、次のステップとして<strong>広告の画像・動画・LPを制作</strong>し、改めて社長に確認をいただきます。</p>
+  <div class="cards c2">
+    <div class="card">
+      <div class="tag" style="background:var(--gold)">WHO</div>
+      <h3>誰に売るか</h3>
+      <p>・キッチンカー<br>・実店舗の飲食店・カフェ<br>・大手外食チェーン（サブ）</p>
+    </div>
+    <div class="card">
+      <div class="tag" style="background:var(--gold)">WHAT</div>
+      <h3>何を売るか</h3>
+      <p>枝葉商材と幹商材を<b>同時並行</b>で売る。<br>・<b>枝葉</b>：分かりやすく売りやすい、実績もある<br>・<b>幹</b>：定着すれば、長く広く売れる</p>
+    </div>
+    <div class="card">
+      <div class="tag" style="background:var(--gold)">HOW</div>
+      <h3>どうやって集めるか</h3>
+      <p>Google・Instagram広告を使う。<br>・画像／動画を量産し、<b>刺さるクリエイティブ</b>を作る<br>・商品を理解し<b>不安をなくすLP</b>を作る</p>
+    </div>
+    <div class="card">
+      <div class="tag" style="background:var(--gold)">HOW MUCH</div>
+      <h3>いくらで集めるか</h3>
+      <p>Google・Instagram <b>各5万・合計10万</b>で初動。<br>・STEP1：<b>CPA 6,600円以下</b>で獲れる広告とLPを目指す<br>・STEP2：調整しながら広告費を上げていく</p>
+    </div>
+  </div>
+</div></section>
+
+<footer>FOODBOAT ネット広告方針 ／ 社長説明資料 ／ 2026年5月</footer>
+
+</body>
+</html>
