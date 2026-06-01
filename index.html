@@ -152,9 +152,12 @@
   footer{text-align:center;padding:24px;color:var(--mut);font-size:13px}
 
   /* ===== スマホ対応 ===== */
+  .tbl-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;width:100%}
+  .tbl-wrap table{min-width:520px;white-space:nowrap}
+
   @media(max-width:600px){
     body{font-size:15px;line-height:1.8}
-    .wrap{padding:0 16px}
+    .wrap{padding:0 14px}
 
     /* ヒーロー */
     .hero{padding:40px 0 36px}
@@ -164,18 +167,18 @@
     /* 冒頭バンド */
     .band{padding:22px 0}
     .band .overview-text{font-size:14px}
-    .band .msg-box{padding:14px 16px;gap:12px}
+    .band .msg-box{padding:14px 14px;gap:10px}
     .band .msg-icon{font-size:24px}
 
     /* 目次マップ */
     .map-wrap{padding:28px 0}
-    .map{padding:20px 16px}
+    .map{padding:18px 14px}
     .map .mhead .t{font-size:17px}
-    .pgroup li{font-size:14px}
+    .pgroup li{font-size:13.5px}
 
     /* ゴールド帯 */
     .part{padding:30px 0 0}
-    .part-inner{padding:20px 20px;border-radius:12px}
+    .part-inner{padding:20px 18px;border-radius:12px}
     .part .ptitle{font-size:20px}
     .part .plabel{font-size:13px}
     .part .pdesc{font-size:13px}
@@ -187,19 +190,15 @@
     h3.subh{font-size:16px}
 
     /* ハイライト・引用 */
-    .hl{padding:16px 18px;font-size:15px}
+    .hl{padding:16px 14px;font-size:15px}
     .hl .big{font-size:18px}
-    .quote{padding:14px 16px;font-size:15px}
-    .recall{padding:14px 16px;font-size:14px}
-
-    /* テーブル（横スクロール対応） */
-    table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch;font-size:13.5px}
-    th,td{padding:10px 12px;white-space:nowrap}
+    .quote{padding:14px 14px;font-size:15px}
+    .recall{padding:14px 14px;font-size:14px}
 
     /* 計算ボックス */
     .calc{gap:8px}
-    .calc .box{min-width:100px;padding:12px 14px}
-    .calc .box .v{font-size:19px}
+    .calc .box{min-width:90px;padding:12px 12px}
+    .calc .box .v{font-size:18px}
     .calc .op{font-size:20px}
 
     /* 棒グラフ */
@@ -342,12 +341,12 @@
 <section id="s2"><div class="wrap">
   <div class="sec-head"><div class="sec-num">2</div><h2>ネット広告は「事業者向け（toB）」と相性がいい</h2></div>
   <p>マルイは、事業者（toB）にも一般消費者（toC）にも商品を届けています。どちらも大切なお客さんです。<br>ただし「<strong>ネット広告</strong>」という手法に限って言えば、<strong>事業者向け（toB）と特に相性がいい</strong>。理由は、1回の購入額にあります。</p>
-  <table>
+  <div class="tbl-wrap"><table>
     <tr><th></th><th>事業者向け（toB）</th><th>一般消費者向け（toC）</th></tr>
     <tr><td><b>1回の購入額</b></td><td class="ok">大きい（約2.2万円・ケース買い）</td><td>小さい（数百〜数千円）</td></tr>
     <tr><td><b>常連になるか</b></td><td class="ok">なる（毎月のように仕入れる）</td><td>一度きりが多い</td></tr>
     <tr><td><b>向いている集客</b></td><td class="ok">ネット広告（Google・Instagram）</td><td>インフルエンサー・口コミ・SNS など</td></tr>
-  </table>
+  </table></div>
   <p><b>なぜ事業者向けに広告が向くのか。</b> ネット広告は「1人集めるのに○円」とお金がかかります。事業者は1人が2.2万円買うので<strong>多少かけても元が取れる</strong>。でも一般消費者向けに500円の商品を売るのに1人800円かけたら<span class="ng">売るほど赤字</span>です。</p>
   <div class="quote">だから、<b>ネット広告は事業者向け（toB）に集中</b>します。<br>一般消費者向けは、インフルエンサーや口コミ、SNSでの話題づくりなど、<b>別の手法のほうが向きます</b>（これはまた別の機会に）。</div>
 </div></section>
@@ -420,7 +419,7 @@
 <section id="s5"><div class="wrap">
   <div class="sec-head"><div class="sec-num">5</div><h2>どこに広告を出すか ― GoogleとInstagram</h2></div>
   <p>広告を出せる場所は他にもあります（LINE・TikTok・YouTube・X…）。でも全部に出すのは、<strong>お客さんがいない地域にまで営業に回るようなもの</strong>。お客さんが確実にいる<strong>2つの場所だけ</strong>に絞ります。</p>
-  <table>
+  <div class="tbl-wrap"><table>
     <tr><th>媒体</th><th>出す？</th><th>理由</th></tr>
     <tr class="row-good"><td><b>Google</b></td><td><span class="ok">◎</span></td><td>仕入れ先を探す人が検索する＝買う気のある人を捕まえられる</td></tr>
     <tr class="row-good"><td><b>Instagram</b></td><td><span class="ok">◎</span></td><td>キッチンカーや飲食店が、自店の集客で日常的に使っている</td></tr>
@@ -428,7 +427,7 @@
     <tr><td>TikTok</td><td><span class="ng">×</span></td><td>娯楽の動画が中心。仕入れを探す人がいない</td></tr>
     <tr><td>YouTube</td><td><span class="ng">×</span></td><td>視聴者は娯楽・情報目的。仕入れ先を探す場ではない</td></tr>
     <tr><td>X（旧Twitter）</td><td><span class="ng">×</span></td><td>情報の拡散・交流が中心。仕入れ先を探す場ではない</td></tr>
-  </table>
+  </table></div>
   <p>次の章から、<b>Google</b>と<b>Instagram</b>を1つずつ見ていきます。</p>
 </div></section>
 
@@ -441,11 +440,11 @@
     <figcaption class="muted" style="margin-top:6px">▲「タピオカ仕入れ」で検索した時。上部の「広告」枠に表示されます</figcaption>
   </figure>
   <h3 class="subh">必要なもの</h3>
-  <table>
+  <div class="tbl-wrap"><table>
     <tr><th>作るもの</th><th>役割（弊社の営業でいうと）</th></tr>
     <tr><td><b>検索広告（文字）</b></td><td>展示会でいう<b>看板</b>。検索結果の上で見つけてもらい、足を止める</td></tr>
     <tr class="row-good"><td><b>LP（専用ページ）</b></td><td>立ち寄ったお客様への<b>商品紹介</b>。説明して購入を決める</td></tr>
-  </table>
+  </table></div>
 
   <figure style="margin:20px 0 6px">
     <img src="purchase-flow.png" alt="広告から購入までの流れ：①広告を見る ②専用ページ(LP) ③商品ページ ④購入完了" style="width:100%;border-radius:14px">
@@ -464,11 +463,11 @@
     <figcaption class="muted" style="margin-top:6px">▲ さまざまな画面に、自然な形で表示されます</figcaption>
   </figure>
   <h3 class="subh">必要なもの</h3>
-  <table>
+  <div class="tbl-wrap"><table>
     <tr><th>作るもの</th><th>役割（弊社の営業でいうと）</th></tr>
     <tr><td><b>広告画像・動画</b></td><td>展示会でいう<b>サンプル商品・看板</b>。まず足を止めてもらう</td></tr>
     <tr class="row-good"><td><b>LP（専用ページ）</b></td><td>サンプルを使ってくれたお客様への<b>商品紹介</b>。説明して購入を決める</td></tr>
-  </table>
+  </table></div>
   <p class="muted">※ LP（専用ページ）は、GoogleとInstagramの<b>両方</b>で使う共通の着地点。<b>購入を決めるのはLP</b>なので、ここが一番大事です。</p>
 
   <h3 class="subh">Instagramならではの強み ―「類似広告」</h3>
